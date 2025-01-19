@@ -1,0 +1,29 @@
+# Get an environment variable
+pm.environment.get("variable_key")
+
+# Get a global variable
+pm.globals.get("variable_key")
+
+# Get a variable
+pm.variables.get("variable_key")
+
+# Get a collection variable
+pm.environment.set("variable_key", "variable_value")
+
+# Set an environment variable
+pm.globals.set("variable_key", "variable_value")
+
+# Set a collection variable
+pm.collectionVariables.set("variable_key", "variable_value")
+
+# Create an environment or global variable
+pm.globals.unset("variable_key")
+
+# Clear a global variable
+pm.collectionVariables.unset("variable_key")
+
+
+# Clear a collection variable
+pm.sendRequest("https://postman-echo.com/get", function (err, response) {
+    console.log(response.json());
+});
